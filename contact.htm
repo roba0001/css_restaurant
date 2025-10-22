@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <h1>Restaurant EK</h1>
+    </header>
+       
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.htm">Menu</a></li>
+            <li><a href="contact.htm" class="currentPage">Contact</a></li>
+        </ul>  
+    </nav>
+
+    <main>
+        
+        <img src="imgs/map.jpg" alt="Map of location of the EK Restaurant">
+
+        <section>
+            <address>
+                <p>Guldbergsgade 29N</p>
+                <p>2200 Copenhagen</p>
+            </address>
+            <p>Phone no.: <a href="tel:20825370">20 82 53 70</a></p>
+            <p>E-mail: <a href="mailto:info@restaurantek.dk">info@restaurantek.dk</a></p>
+        </section>
+
+        <form id="contactForm" method="POST" action="maito:info@restaurantek.dk">
+            <fieldset>
+                <legend>Contact form</legend>
+                <!-- TILFØJ PATTERNS -->
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div>
+                    <label for="phoneNo">Phone Number</label>
+                    <input type="tel" id="phoneNo" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="personAmount">Persons</label>
+                    <input type="number" id="personAmount" required min="1" max="20">
+                </div>
+                <div>
+                    <label for="dateTime">Date and Time</label>
+                    <input type="datetime-local" id="dateTime" required>
+                </div>
+                <div>
+                    <label for="furtherInfo">Further Information</label>
+                    <textarea id="furtherInfo" rows='5'></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>&copy; 2021-2025 EK Development</footer>
+</body>
+</html>

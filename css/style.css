@@ -1,0 +1,183 @@
+@import 'variables.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+header {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    color: var(--accentBlue);
+    font-family: var(--headerFont);
+    background-color: var(--bgColorHeader);
+
+    h1 {
+        font-weight: 600;
+    }
+}
+
+nav {
+    background-color: var(--bgColorNav);
+    padding: 0.5rem 1rem;
+
+    li {
+        list-style: none;
+        text-align: center;
+        border-bottom-style: solid;
+        border-color: var(--accentBlue);
+        padding: 0.25rem 0;
+
+        color: var(--accentRed);
+        font-weight: bold;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accentBlue);
+            font-family: var(--headerFont);
+            font-weight: 700;
+            font-size: 01rem;
+
+
+            &:focus {
+                color: red;
+            }
+        }
+    }
+}
+
+.currentPage {
+    color: var(--accentRed);
+
+}
+  
+
+/* ########################## */
+/* ########################## */
+/* ########################## */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0.75rem 1rem;
+    font-family: var(--textFont);
+
+    img {
+        width: 100%;
+        align-self: center;
+        border-radius: 5%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-left: 0.5rem;
+
+        li {
+        list-style: none;
+        color: var(--accentRed);
+        font-weight: bold;
+        }
+    }
+
+    .reviewSection {
+        background-color: var(--gray);
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+}
+
+footer {
+    padding: 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bgColorNav);
+    color: var(--accentBlue);
+    font-family: var(--textFont);
+    margin-top: 1rem;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    h1 {
+        padding-left: 1rem;
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        padding: 0 1rem;
+
+        li {
+            border: none;
+        }
+    }
+   
+    
+    
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+
+main {
+    
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    padding: 0 10rem;
+    height: 80vh;
+
+    
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+    
+    img {
+        /* grid-column: 2; */
+        grid-row: 1/-2;
+        align-self: first baseline;
+    }
+
+    section:has(ul){
+        grid-row: 2;
+    }
+
+    .reviewSection{
+        grid-row: 3;
+        grid-column: 1/-1;
+        height: fit-content;
+        /* margin-bottom: 8rem; */
+    }
+    
+}
+
+}
