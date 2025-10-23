@@ -65,7 +65,8 @@ main {
 
         .menuCard {
             height: fit-content;
-            grid-template-columns: 1fr 1.5fr;
+            grid-template-columns: 1fr 1.5fr;   
+    
         }
     }
 }

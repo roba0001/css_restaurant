@@ -104,12 +104,14 @@ main {
         /* grid-column: 2; */
         grid-row: 1/3;
         align-self: first baseline;
+        width: 75%;
 
     }
 
     section:has(ul){
         grid-row: 2;
     }
+    
 
     .reviewSection{
         grid-row: 3;

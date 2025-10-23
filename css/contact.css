@@ -11,8 +11,15 @@ main {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
+
         address {
             font-style: normal;
+        }
+
+        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
         }
     }
 
